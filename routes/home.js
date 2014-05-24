@@ -1,7 +1,7 @@
 'use strict';
 
 exports.index = function (req, res) {
-	res.render('', {
+	res.render('index.html', {
 		title: ''
 	});
 };
