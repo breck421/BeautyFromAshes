@@ -1,0 +1,58 @@
+.opacity(@opacity) {
+	opacity: @opacity;
+	// IE8 filter
+	@opacity-ie: (@opacity * 100);
+	filter: ~"alpha(opacity=@{opacity-ie})";
+}
+
+.transparent-bkgd() {
+	background-color: rgba(255,255,255,0);
+}
+
+// .box-sizing(border-box)
+.box-sizing(@boxmodel) {
+	-webkit-box-sizing: @boxmodel;
+	-moz-box-sizing: @boxmodel;
+	box-sizing: @boxmodel;
+}
+
+.border-box() {
+	.box-sizing(border-box);
+}
+
+// ex: .box-shadow(0 -5px 4px -3px #CCCCCC inset);
+// box-shadow: h-shadow v-shadow blur spread color inset;
+.box-shadow(@shadow) {
+	-webkit-box-shadow: @shadow;
+	-moz-box-shadow: @shadow;
+	box-shadow: @shadow;
+}
+
+// ex: .border-radius(4px)
+// ex: .border-radius(0 0 4px 4px);
+.border-radius(@radius) {
+	-html-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+
+// bbv1
+// .borderRadius() {
+// 	.cc-border-radius()
+// }
+
+.cc-border-radius() {
+	.border-radius(4px);
+}
+
+.clearfix() {
+	&:before,
+	&:after {
+		content: " "; /* 1 */
+		display: table; /* 2 */
+	}
+	&:after {
+		clear: both;
+	}
+}

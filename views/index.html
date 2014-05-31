@@ -9,34 +9,60 @@
 
 	<title>Beauty From Ashes</title>
     <link rel="stylesheet" type="text/css" href="libs/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="styles/app.css" />
-
+    <link rel="stylesheet" type="text/css" href="styles/app.min.css" />
 </head>
 
-<body class="container">
+<body>
     <div class="container">
-        <header>
-            <img width="100%" src="images/header.jpg" />
+        <header class="row">
+            <img class="col-md-12" src="images/header.jpg" />
         </header>
-        <nav class="navbar" role="navigation">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Photos</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Story <b class="caret"></b></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">We're Pregnant</a></li>
-                        <li><a href="#">Our First Ultrasound</a></li>
-                        <li><a href="#">Doctor's Visits</a></li>
-                        <li><a href="#">The News</a></li>
-                        <li class="divider"></li>
-                    </ul>
-                </li>
-                <li><a href="#">About Jamie</a></li>
-                <li><a href="#">Contact</a></li>
 
-            </ul>
-        </nav>
+	    <div class="row">
+            <nav class="navbar primary-nav col-md-12" role="navigation">
+	            <ul class="nav navbar-nav navbar-default">
+				    <li class="active"><a href="#">Home</a></li>
+				    <li><a href="#">Photos</a></li>
+				    <li class="dropdown">
+					    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Our Story <b class="caret"></b></a>
+					    <ul class="dropdown-menu" role="menu">
+						    <li><a href="#">We're Pregnant</a></li>
+						    <li><a href="#">Our First Ultrasound</a></li>
+						    <li><a href="#">Doctor's Visits</a></li>
+						    <li><a href="#">The News</a></li>
+						    <li class="divider"></li>
+					    </ul>
+				    </li>
+				    <li><a href="#">About Jamie</a></li>
+				    <li><a href="#">Contact</a></li>
+			    </ul>
+		    </nav>
+	    </div>
+
+        <div class="content clearfix">
+			<h1>Beauty from ashes</h1>
+	        <img width="500px" class="pull-right" src="images/jamie.jpg" />
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, autem dolores dolorum harum ipsum nam nulla officiis pariatur placeat porro ratione saepe sed sint, sunt, tempora temporibus ut. Repellendus, sunt.</p>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, autem dolores dolorum harum ipsum nam nulla officiis pariatur placeat porro ratione saepe sed sint, sunt, tempora temporibus ut. Repellendus, sunt.</p>
+
+	        <h1>Thank you</h1>
+	        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, autem dolores dolorum harum ipsum nam nulla officiis pariatur placeat porro ratione saepe sed sint, sunt, tempora temporibus ut. Repellendus, sunt.</p>
+
+	     <!--   <div class="well">
+	            <h4>We're coming home</h4>
+	            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, autem dolores dolorum harum ipsum nam nulla officiis pariatur placeat porro ratione saepe sed sint, sunt, tempora temporibus ut. Repellendus, sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, autem dolores dolorum harum ipsum nam nulla officiis pariatur placeat porro ratione saepe sed sint, sunt, tempora temporibus ut. Repellendus, sunt.</p>
+	        </div>-->
+        </div>
+
+        <footer class="row">
+            <nav class="navbar col-md-12" role="navigation">
+                <a href="#">Beauty From Ashes</a> |
+                <a href="http://stringofpearlsonline.org/" target="_blank">String of Pearls</a> |
+                <a href="http://www.oif.org/" target="_blank">OI Foundation</a> |
+                <a href="http://www.redrockschurch.com/" target="_blank">Red Rocks Church</a> |
+                <a href="http://meganclara.wordpress.com/" target="_blank">Megan's Blog</a>
+            </nav>
+        </footer>
     </div>
 
 
@@ -44,7 +70,6 @@
 
 <script type="text/javascript" src="libs/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
-
 <script type="text/javascript" src="libs/angular/angular.js"></script>
 
 

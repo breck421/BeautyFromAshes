@@ -1,0 +1,102 @@
+@import "helpers.less";
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+
+@fancy-font: 'Bitter', serif;
+@primary-color: #9ebd7c;
+@primary-color-dark: darken(@primary-color, 5%);
+@font-color: #333333;
+
+header.row {
+	img.col-md-12 {
+		padding: 0;
+	}
+}
+
+.primary-nav {
+	.border-radius(0px);
+
+	margin-top: 24px;
+	background-color: @primary-color;
+
+	ul {
+		background-color: @primary-color;
+
+		li {
+			&.focus, &:focus, &[focus] {
+				outline-style: none;
+			}
+
+			&.open {
+				> a {
+					background-color: @primary-color-dark;
+					border-color: #428bca;
+
+					&.hover, &:hover, &[hover], .focus, &:focus, &[focus] {
+						background-color: @primary-color-dark;
+						border-color: darken(@primary-color, 25%);
+					}
+				}
+			}
+		}
+
+		a {
+			color: @font-color;
+
+			&.hover, &:hover, &[hover] {
+				text-decoration: none;
+				background-color: darken(@primary-color, 5%);
+			}
+		}
+	}
+}
+
+h1 {
+	color: darken(@primary-color, 25%);
+	font-family: @fancy-font;
+	text-transform: capitalize;
+}
+
+.content {
+	margin: 0;
+	padding: 0 12px;
+}
+
+.well {
+	background-color: #dddfde;
+	border-color: darken(#dddfde, 20%);
+	color: darken(#dddfde, 50%);
+
+	p, h4 {
+		color: darken(#dddfde, 50%);
+	}
+}
+
+footer {
+	margin-top: 24px;
+	background-color: @primary-color;
+	text-align: center;
+	height: 40px;
+
+	nav {
+		a {
+			line-height: 40px;
+			color: @font-color;
+
+			margin-left: 10px;
+			margin-right: 10px;
+
+			&:first-child {
+				margin-left: 0;
+			}
+
+			&:last-child {
+				margin-right: 0;
+			}
+
+			&.hover, &:hover, &[hover] {
+				text-decoration: underline;
+				color: darken(@font-color, 20%);
+			}
+		}
+	}
+}
