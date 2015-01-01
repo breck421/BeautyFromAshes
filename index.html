@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="dcterms.rightsHolder" content="Copyright (c) All Rights Reserved.">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Beauty From Ashes</title>
+    <link rel="stylesheet" type="text/css" href="app/assets/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="app/assets/styles/app.css">
+</head>
+
+<body data-ng-app="BFA" id="bfa">
+    <div class="container" data-ng-controller="AppCtrl">
+        <header class="row">
+            <div class="page-head col-md-12" src="app/assets/images/header.jpg"></div>
+        </header>
+
+        <div class="row">
+            <nav class="navbar primary-nav col-md-12" role="navigation">
+                <ul class="nav navbar-nav navbar-default">
+                    <li data-ui-sref="home" data-ui-sref-active="active">
+                        <a data-ng-click="goTo('home')">Home</a></li>
+                    <li data-ui-sref="photos" data-ui-sref-active="active">
+                        <a data-ng-click="goTo('photos')">Photos</a>
+                    </li>
+                    <li class="dropdown" data-ui-sref="posts" data-ui-sref-active="active">
+                        <a class="dropdown-toggle" data-toggle="dropdown">Our Story <b class="caret"></b></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a data-ng-click="goTo('posts')">We're Pregnant</a></li>
+                            <li><a data-ng-click="goTo('posts')">Our First Ultrasound</a></li>
+                            <li><a data-ng-click="goTo('posts')">Doctor's Visits</a></li>
+                            <li><a data-ng-click="goTo('posts')">The News</a></li>
+                            <!--<li class="divider"></li>-->
+                        </ul>
+                    </li>
+                    <li data-ui-sref="about" data-ui-sref-active="active">
+                        <a data-ng-click="goTo('about')">About Jamie</a>
+                    </li>
+                    <li data-ui-sref="contact" data-ui-sref-active="active">
+                        <a data-ng-click="goTo('contact')">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content clearfix">
+            <ui-view ng-cloak></ui-view>
+        </div>
+
+        <footer class="row">
+            <nav class="navbar col-md-12" role="navigation">
+                <a data-ng-click="goTo('home')">Beauty From Ashes</a> |
+                <a href="http://stringofpearlsonline.org/" target="_blank">String of Pearls</a> |
+                <a href="http://www.oif.org/" target="_blank">OI Foundation</a> |
+                <a href="http://www.redrockschurch.com/" target="_blank">Red Rocks Church</a> |
+                <a href="http://meganclara.wordpress.com/" target="_blank">Megan's Blog</a>
+            </nav>
+        </footer>
+    </div>
+
+
+
+
+<script type="text/javascript" src="app/assets/libs/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="app/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app/assets/libs/marked/lib/marked.js"></script>
+<script type="text/javascript" src="app/assets/libs/angular/angular.js"></script>
+<script type="text/javascript" src="app/assets/libs/angular-md/dist/angular-md.min.js"></script>
+<script type="text/javascript" src="app/assets/libs/ui-router/release/angular-ui-router.min.js"></script>
+
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/views/about/About.ctrl.js"></script>
+<script type="text/javascript" src="app/views/contact/Contact.ctrl.js"></script>
+<script type="text/javascript" src="app/views/home/Home.ctrl.js"></script>
+<script type="text/javascript" src="app/views/photos/Photos.ctrl.js"></script>
+<script type="text/javascript" src="app/views/posts/Posts.ctrl.js"></script>
+
+</body>
+</html>

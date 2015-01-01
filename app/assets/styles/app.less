@@ -1,0 +1,147 @@
+@import "helpers";
+@import url(http://fonts.googleapis.com/css?family=Bitter);
+
+@fancy-font: 'Bitter', serif;
+@primary-color: #9ebd7c;
+@primary-color-dark: darken(@primary-color, 5%);
+@font-color: #333333;
+
+#bfa {
+    padding-bottom: 24px;
+    padding-top: 12px;
+    background-color: #F3FFE5;
+//    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzYwJz4KCTxkZWZzPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdjJyB3aWR0aD0nMzAnIGhlaWdodD0nNjAnIHg9JzAnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCQkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyM5ZWJkN2MnIHN0cm9rZS13aWR0aD0nMC4yJyBkPSdNLTIsMUw3LDEwTS0yLDZMNywxNU0tMiwtNEw3LDUnLz4KCQk8L3BhdHRlcm4+CgkJPHBhdHRlcm4gcGF0dGVyblVuaXRzPSd1c2VyU3BhY2VPblVzZScgaWQ9J2MyJyB3aWR0aD0nMzAnIGhlaWdodD0nNjAnIHg9JzEwMCUnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCQkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyM5ZWJkN2MnIHN0cm9rZS13aWR0aD0nMC4yJyBkPSdNNywxTC0yLDEwTTcsNkwtMiwxNU03LC00TC0yLDUnLz4KCQk8L3BhdHRlcm4+Cgk8L2RlZnM+Cgk8cmVjdCB3aWR0aD0nNTAlJyBoZWlnaHQ9JzEwMCUnIGZpbGw9J3VybCgjYyknLz4KCTxyZWN0IHg9JzUwJScgd2lkdGg9JzUwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2MyKScvPgo8L3N2Zz4=');
+//    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzIxMic+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzEwNicgaGVpZ2h0PScyMTInIHg9JzAnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCQkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyM5ZWJkN2MnIHN0cm9rZS13aWR0aD0nMS4yOScgZD0nTS0yLDFMNywxME0tMiw2TDcsMTVNLTIsLTRMNyw1Jy8+CgkJPC9wYXR0ZXJuPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdjMicgd2lkdGg9JzEwNicgaGVpZ2h0PScyMTInIHg9JzEwMCUnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCQkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyM5ZWJkN2MnIHN0cm9rZS13aWR0aD0nMS4yOScgZD0nTTcsMUwtMiwxME03LDZMLTIsMTVNNywtNEwtMiw1Jy8+CgkJPC9wYXR0ZXJuPgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9JzUwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2MpJy8+Cgk8cmVjdCB4PSc1MCUnIHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjMiknLz4KPC9zdmc+');
+    background-image:url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMDAlJyBoZWlnaHQ9JzIxMic+Cgk8ZGVmcz4KCQk8cGF0dGVybiBwYXR0ZXJuVW5pdHM9J3VzZXJTcGFjZU9uVXNlJyBpZD0nYycgd2lkdGg9JzEwNicgaGVpZ2h0PScyMTInIHg9JzAnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCQkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyNBQkJEOTcnIHN0cm9rZS13aWR0aD0nMS4yOScgZD0nTS0yLDFMNywxME0tMiw2TDcsMTVNLTIsLTRMNyw1Jy8+CgkJPC9wYXR0ZXJuPgoJCTxwYXR0ZXJuIHBhdHRlcm5Vbml0cz0ndXNlclNwYWNlT25Vc2UnIGlkPSdjMicgd2lkdGg9JzEwNicgaGVpZ2h0PScyMTInIHg9JzEwMCUnIHk9JzAnIHZpZXdCb3g9JzAgMCA1IDEwJz4KCQkJPHBhdGggZmlsbC1vcGFjaXR5PScwJyBzdHJva2U9JyNBQkJEOTcnIHN0cm9rZS13aWR0aD0nMS4yOScgZD0nTTcsMUwtMiwxME03LDZMLTIsMTVNNywtNEwtMiw1Jy8+CgkJPC9wYXR0ZXJuPgoJPC9kZWZzPgoJPHJlY3Qgd2lkdGg9JzUwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd1cmwoI2MpJy8+Cgk8cmVjdCB4PSc1MCUnIHdpZHRoPSc1MCUnIGhlaWdodD0nMTAwJScgZmlsbD0ndXJsKCNjMiknLz4KPC9zdmc+');
+    .container {
+        max-width: 970px;
+    }
+
+    header.row {
+        .page-head {
+            padding: 0;
+            background-image: url('../images/header.jpg');
+            height: 288px;
+        }
+    }
+
+    .primary-nav {
+        .border-radius(0px);
+
+        background-color: @primary-color;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        ul {
+            background-color: @primary-color;
+
+            li {
+                &.focus, &:focus, &[focus] {
+                    outline-style: none;
+                }
+
+                &.open {
+                    > a {
+                        background-color: @primary-color-dark;
+                        border-color: #428bca;
+
+                        &.hover, &:hover, &[hover], .focus, &:focus, &[focus] {
+                            background-color: @primary-color-dark;
+                            border-color: darken(@primary-color, 25%);
+                        }
+                    }
+                }
+
+                &.active, &:active, &[active] {
+                    a {
+                        background-color: darken(@primary-color, 5%);
+                    }
+
+                    li {
+                        a {
+                            background-color: @primary-color;
+
+                            &.hover, &:hover, &[hover], .focus, &:focus, &[focus] {
+                                background-color: @primary-color-dark;
+                                border-color: darken(@primary-color, 25%);
+                            }
+                        }
+                    }
+                }
+            }
+
+            a {
+                color: @font-color;
+
+                &.hover, &:hover, &[hover] {
+                    text-decoration: none;
+                    background-color: darken(@primary-color, 10%);
+                }
+            }
+        }
+    }
+
+    h1 {
+        color: darken(@primary-color, 25%);
+        font-family: @fancy-font;
+        text-transform: capitalize;
+    }
+
+    .container {
+        background-color: #FFFFFF;
+    }
+
+    .content {
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    .well {
+        background-color: #dddfde;
+        border-color: darken(#dddfde, 20%);
+        color: darken(#dddfde, 50%);
+
+        p, h4 {
+            color: darken(#dddfde, 50%);
+        }
+    }
+
+
+
+    footer {
+        margin-top: 24px;
+        background-color: @primary-color;
+        text-align: center;
+        height: 40px;
+
+        nav {
+            margin-bottom: 0;
+            min-height: inherit;
+
+            a {
+                line-height: 40px;
+                color: @font-color;
+
+                margin-left: 10px;
+                margin-right: 10px;
+
+                &:first-child {
+                    margin-left: 0;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                &.hover, &:hover, &[hover] {
+                    text-decoration: underline;
+                    color: darken(@font-color, 20%);
+                }
+            }
+        }
+    }
+}

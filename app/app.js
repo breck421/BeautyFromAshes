@@ -1,32 +1,46 @@
 'use strict';
 
-var BFA = angular.module('BFA', [
+var BFA = angular.module('BFA', ['ui.router', 'yaru22.md']);
 
-]);
+BFA.config(['$stateProvider', '$urlRouterProvider',
+    function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state("home", {
+                url: "/",
+                templateUrl: "app/views/home/home.html",
+                controller: 'HomeCtrl'
+            }).state("about", {
+                url: "/about",
+                templateUrl: "app/views/about/about.html",
+                controller: 'AboutCtrl'
+            })
+            .state("contact", {
+                url: "/contact",
+                templateUrl: "app/views/contact/contact.html",
+                controller: 'ContactCtrl'
+            })
+            .state("posts", {
+                url: "/posts",
+                templateUrl: "app/views/posts/posts.html",
+                controller: 'PostsCtrl'
+            })
+            .state("photos", {
+                url: "/photos",
+                templateUrl: "app/views/photos/photos.html",
+                controller: 'PhotosCtrl'
+            });
 
-BFA.controller('AppController', ['$scope', '$rootScope', 'UserService',
-	function AppController($scope, $rootScope, UserService) {
-		UserService.decUsers();
+        $urlRouterProvider.otherwise("/");
+    }]);
 
-		$rootScope.isLoggedIn = UserService.isLoggedIn();
 
-		$scope.logout = function() {
-			$rootScope.isLoggedIn = false;
-			UserService.logout();
-		};
-	}]);
+BFA.controller('AppCtrl', ['$scope', '$rootScope', '$state',
+    function AppCtrl($scope, $rootScope, $state) {
+        $scope.goTo = function(state) {
+            console.info('state', state);
 
-//  '$locationProvider',
-//$stateProvider, $urlRouterProvider, $locationProvider,
-BFA.config(['$stateProvider', '$urlRouterProvider', '$locationProvider',
-	function($stateProvider, $urlRouterProvider, $locationProvider) {
-		$locationProvider.html5Mode(true);
-		$urlRouterProvider.otherwise("/components");
-
-		$stateProvider
-			.state('', {
-				url: "/components",
-				templateUrl: "js/views/components/components.html",
-				controller: 'ComponentController'
-			});
-	}]);
+            if ($state.current.name.indexOf(state) === -1) {
+                $state.go(state);
+            }
+        };
+    }]);
